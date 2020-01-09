@@ -1,0 +1,17 @@
+<%= form_with(model: pages_about, local: true) do |form| %>
+  <% if pages_about.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pages_about.errors.count, "error") %> prohibited this pages_about from being saved:</h2>
+
+      <ul>
+        <% pages_about.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
